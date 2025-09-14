@@ -1,0 +1,593 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0f3d0f;
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Background grid pattern */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a4d1a;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-radius: 8px;
+  margin: 10px 20px 0 20px;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #d9f71f;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.nav-links li a,
+.dropbtn {
+  color: #d9f71f;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #1a4d1a;
+  border: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.dropbtn:hover {
+  background-color: #d9f71f;
+  color: #0f3d0f;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a4d1a;
+  min-width: 120px;
+  border-radius: 8px;
+  top: 30px;
+  left: 0;
+  z-index: 20;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 8px 12px;
+  color: #d9f71f;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.dropdown-content li a:hover {
+  background-color: #d9f71f;
+  color: #0f3d0f;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Get Started button */
+.get-started-btn {
+  background-color: #d9f71f;
+  color: #0f3d0f;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #b0c30b;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: #d9f71f;
+  text-shadow:
+    0 0 5px #d9f71f,
+    0 0 10px #d9f71f,
+    0 0 20px #d9f71f;
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
+}
+
+.hero-text h1 span {
+  display: block;
+}
+
+.hero-text p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  max-width: 400px;
+  color: white;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 2px solid #d9f71f;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.buy-now {
+  background-color: #d9f71f;
+  color: #0f3d0f;
+  border-color: #d9f71f;
+}
+
+.buy-now:hover {
+  background-color: transparent;
+  color: #d9f71f;
+}
+
+.learn-more {
+  background-color: transparent;
+  color: #d9f71f;
+  border-color: #d9f71f;
+}
+
+.learn-more:hover {
+  background-color: #d9f71f;
+  color: #0f3d0f;
+}
+
+/* Frog placeholder */
+.frog-placeholder {
+  width: 350px;
+  height: 500px;
+  background: linear-gradient(135deg, #1a4d1a, #0f3d0f);
+  border-radius: 20px;
+  box-shadow:
+    0 0 20px #d9f71f,
+    inset 0 0 30px #4caf50;
+  position: relative;
+}
+
+/* Banners */
+.banner {
+  position: fixed;
+  width: 120vw;
+  left: -10vw;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 10px 0;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 100;
+  transform-origin: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.banner-green {
+  background-color: #0f3d0f;
+  color: white;
+  top: 80vh;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 10px #0f3d0f;
+}
+
+.banner-yellow {
+  background-color: #d9f71f;
+  color: #0f3d0f;
+  top: 85vh;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 10px #d9f71f;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+  .frog-placeholder {
+    width: 250px;
+    height: 350px;
+    margin-top: 30px;
+  }
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .get-started-btn {
+    display: none;
+  }
+}
+/* How to Buy Section */
+.how-to-buy {
+  background-color: #121212;
+  padding: 40px 60px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  min-height: 600px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: #121212;
+  padding: 40px 60px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px; /* Increased width to match home section */
+  margin: 0 auto 60px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  min-height: 600px; /* Added min height for better visual balance */
+}
+
+.faq-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.faq-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.faq-list {
+  flex: 1 1 60%;
+}
+
+.faq-image {
+  flex: 1 1 35%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-to-buy h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow:
+    0 0 5px #d9f71f,
+    0 0 10px #d9f71f;
+  letter-spacing: 0.1em;
+}
+
+.how-to-buy p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.step {
+  background-color: #0f3d0f;
+  border: 2px dotted #4caf50;
+  border-radius: 12px;
+  padding: 25px 20px 40px;
+  width: 250px;
+  color: white;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background-color: #0f3d0f;
+  border: 2px dotted #4caf50;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d9f71f;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.frog-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Placeholder frog icons - these can be replaced with actual images */
+.frog-icon-1 {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+}
+
+.frog-icon-2 {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+}
+
+.frog-icon-3 {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+}
+
+.step h3 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #d9f71f;
+}
+
+.step p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: white;
+}
+
+.buy-memeco-btn {
+  margin-top: 40px;
+  background-color: #d9f71f;
+  color: #0f3d0f;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.buy-memeco-btn:hover {
+  background-color: #b0c30b;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .how-to-buy {
+    padding: 40px 20px 60px;
+  }
+  .steps {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .step {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+/* About Section */
+.about {
+  background-color: #121212;
+  padding: 40px 60px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  min-height: 600px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow:
+    0 0 5px #d9f71f,
+
+.about p {
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
+font-size: 1.1rem;
+margin-bottom: 30px;
+color: white;
+text-align: center;
+}
+
+.about-content p {
+font-weight: 400;
+font-size: 1rem;
+margin-bottom: 20px;
+color: white;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.about-list {
+list-style: none;
+padding-left: 0;
+max-width: 600px;
+margin: 0 auto 30px;
+}
+
+.about-list li {
+font-weight: 700;
+font-size: 1rem;
+margin-bottom: 12px;
+color: white;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.about-list li::before {
+content: "✔️";
+color: #d9f71f;
+font-weight: 900;
+}
+
+.buy-memeco-btn {
+display: block;
+margin: 0 auto 40px;
+background-color: #d9f71f;
+color: #0f3d0f;
+border: none;
+padding: 10px 30px;
+border-radius: 20px;
+font-weight: 700;
+cursor: pointer;
+font-size: 1rem;
+transition: background-color 0.3s ease;
+font-family: 'Roboto', sans-serif;
+max-width: 200px;
+text-align: center;
+}
+
+.buy-memeco-btn:hover {
+background-color: #b0c30b;
+}
+
+.community-rewards {
+border: 3px dashed #d9f71f;
+border-radius: 20px;
+padding: 20px 30px;
+max-width: 600px;
+margin: 0 auto;
+color: white;
+font-family: 'Roboto', sans-serif;
+text-align: center;
+}
+
+.community-rewards h3 {
+font-weight: 900;
+font-size: 1.5rem;
+margin-bottom: 10px;
+color: #d9f71f;
+}
+
+.community-rewards p {
+font-weight: 400;
+font-size: 1rem;
+line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+.about {
+padding: 40px 20px 60px;
+}
+.about-content p,
+.about-list,
+.community-rewards {
+max-width: 100%;
+padding: 0 10px;
+}
+}
+
+/* New style for home section texts similar to roadmap list */
+.home-highlight {
+  background-color: #0f3d0f;
+  color: #d9f71f;
+  font-family: 'Orbitron', sans-serif;
+  padding: 10px 15px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow:
+    0 0 5px #d9f71f,
+    0 0 10px #d9f71f;
+}
+
+.home-highlight .star {
+  margin-right: 8px;
+  color: #d9f71f;
+}

@@ -1,0 +1,146 @@
+.contact-section {
+  background-color: #0f3d0f;
+  padding: 40px 20px 20px 20px;
+  color: #d9f71f;
+  font-family: 'Roboto', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 2px solid #a6d22f;
+  box-shadow: inset 0 10px 20px #0a2a0a;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info,
+.quick-links,
+.contact-details {
+  flex: 1 1 250px;
+}
+
+.contact-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #d9f71f;
+  text-shadow:
+    0 0 10px #d9f71f,
+    0 0 20px #d9f71f;
+  user-select: none;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: #a6d22f;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #a6d22f;
+  color: #0f3d0f;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #d9f71f;
+  color: #0a2a0a;
+}
+
+.quick-links h3,
+.contact-details h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #d9f71f;
+  text-shadow:
+    0 0 8px #d9f71f,
+    0 0 15px #d9f71f;
+  user-select: none;
+}
+
+.quick-links ul,
+.contact-details ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  color: #a6d22f;
+}
+
+.quick-links ul li,
+.contact-details ul li {
+  margin-bottom: 10px;
+}
+
+.quick-links ul li a {
+  color: #a6d22f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quick-links ul li a:hover {
+  color: #d9f71f;
+}
+
+.contact-details ul li .icon {
+  margin-right: 8px;
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #a6d22f;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #a6d22f;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-links a {
+  color: #a6d22f;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d9f71f;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .footer-links a {
+    margin-left: 0;
+  }
+}

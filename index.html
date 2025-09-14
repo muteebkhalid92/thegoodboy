@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Good Boy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="tokenomics.css" />
+  <link rel="stylesheet" href="roadmap.css" />
+  <link rel="stylesheet" href="faq.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="tokenomics.js"></script>
+  <script defer src="faq.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo" style="display: flex; align-items: center;">
+        <div style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #d9f71f; margin-right: 8px; border: 2px solid #d9f71f;">
+          <img src="images/Logotgb.png" alt="Logo TGB" style="width: 24px; height: 24px;" />
+        </div>
+        The Good Boy
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#tokenomics">TOKENOMICS</a></li>
+        <li><a href="#roadmap">ROADMAP</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+      <button class="get-started-btn">GET STARTED</button>
+    </nav>
+  </header>
+
+  <main>
+      <section id="home" class="hero">
+      <div class="hero-text">
+        <h1><span>The Good Boy</span><br /></h1>
+        <p class="home-highlight">The Most Loyal Coin on the Solana Blockchain! Join the Hype, Trade, and Meme to the Moon!</p>
+        <p class="home-highlight">The king of Loyalty and Trust in Crypto!</p>
+<p class="home-highlight"><span class="star"></span>CA:<code id="contract-address">142354545hkj4hkjhkjshgjks</code> <button id="copy-btn" class="btn buy-now" style="font-size: 0.9em; padding: 6px 14px; margin-left: 8px;">Copy</button></p>
+        <div class="hero-buttons">
+          <button class="btn buy-now">BUY NOW</button>
+          <button class="btn learn-more">LEARN MORE</button>
+        </div>
+      </div>
+      <div class="hero-image" style="display: flex; justify-content: center; align-items: center;">
+        <img src="images/TGB1.png" alt="The Good Boy character" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+      </div>
+    </section>
+
+
+
+    <section id="about" class="roadmap-section">
+        <div class="no timeline">
+            <div class="no marker"></div>
+<h2 style="font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 2rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; color: #d9f71f; text-shadow: 0 0 5px #d9f71f; text-align: center;">STORY BEHIND THE GOOD BOY</h2>
+            <div class="logo-tgb-container" style="margin: 0 auto 15px; width: 80px; height: 80px; border-radius: 50%; background-color: #d9f71f; display: flex; justify-content: center; align-items: center; overflow: hidden; box-shadow: 0 0 10px #d9f71f;">
+  <img src="images/Logotgb.png" alt="Logo TGB" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <p style="font-family: sans-serif; margin: 0 auto 15px; font-size: 1em; line-height: 1.4; text-shadow: 0 0 3px #d9f71f;">
+                In a world full of ordinary coins, The Good Boy emerged as a loyal companion to crypto enthusiasts everywhere. This brave and clever dog symbolizes trust, friendship, and the joy of community. From humble beginnings as a playful pup, The Good Boy has grown into a symbol of hope and prosperity, always ready to fetch new opportunities and guard your investments.
+            </p>
+            <ul class="about-list" style="font-family: sans-serif; list-style-position: inside; padding-left: 0; text-align: left; margin: 0 auto 15px; font-size: 1em; line-height: 1.4; text-shadow: 0 0 3px #d9f71f;">
+                <li>✅ No VCs, no big corporations, just pure dogged determination!</li>
+                <li>✅ Community-driven and built on trust and loyalty!</li>
+                <li>✅ The Good Boy doesn’t just fetch; it leads the pack!</li>
+            </ul>
+            <div style="text-align: center; margin-top: 15px;">
+                <button class="btn buy-memeco-btn" style="padding: 8px 20px; font-size: 0.9em; box-shadow: 0 0 5px #d9f71f;">BUY NOW</button>
+            </div>
+            </div>
+          </div>
+    </section>
+
+<section id="tokenomics" class="tokenomics neon-tokenomics" style="background: linear-gradient(135deg, #1a3a1a, #4caf50); color: white; padding: 40px 20px; text-align: center;">
+    <h2 style="font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 2.5rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;">TOKENOMICS</h2>
+    <p style="max-width: 600px; margin: 0 auto 40px; font-weight: 500;">
+        Discover our tokenomics: fair distribution, strong rewards, and growth potential—visualized clearly! 🚀
+    </p>
+    <div style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+        <canvas id="tokenomicsChart" width="250" height="250"></canvas>
+        <div style="margin-top: 20px; font-weight: 700; font-size: 1.2rem; color: #d9f71f; text-align: center;">Total supply<br />1,000,000,000</div>
+    </div>
+</section>
+
+    <section id="roadmap" class="roadmap-section">
+      <div class="roadmap-container">
+        <div class="roadmap-title">ROADMAP</div>
+        <div class="roadmap-timeline">
+          <div class="roadmap-phase">
+            <div class="phase-marker"></div>
+            <div class="phase-content">
+              <h3>📍 Phase 1</h3>
+              <h2>The Good Boy Awakens 🐶</h2>
+              <ul>
+                <li>⭐ Launch and Trading Live </li>               
+                <li>⭐ Trending on Crypto Twitter</li>
+                <li>⭐ Meme Contests & Community Giveaways</li>
+                <li>⭐ Partnerships & Collaborations</li>
+                <li>⭐ Big Marketing Boost</li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="roadmap-phase">
+            <div class="phase-marker"></div>
+            <div class="phase-content">
+              <h3>📍 Phase 2</h3>
+              <h2>The Hop Forward 🚀</h2>
+              <ul>
+                <li>⭐ CoinGecko & CoinMarketCap Listings</li>
+                <li>⭐ First Exchange Listing</li>
+                <li>⭐ 10,000+ Holders Milestone</li>
+                <li>⭐ Meme Contests & Community Giveaways</li>
+                <li>⭐ Partnerships & Collaborations</li>
+              </ul>
+            </div>
+          </div>
+          <div class="roadmap-phase">
+            <div class="phase-marker"></div>
+            <div class="phase-content">
+              <h3>📍 Phase 3</h3>
+              <h2>The Royal Leap 👑</h2>
+              <ul>
+                <li>⭐ Rewards for loyal Holders</li>
+                <li>⭐ NFT Collection Launch</li>
+                <li>⭐ Merch & Meme Store</li>
+                <li>⭐ Charity & Community Initiatives</li>
+              </ul>
+            </div>
+          </div>
+          <div class="roadmap-phase">
+            <div class="phase-marker"></div>
+            <div class="phase-content">
+              <h3>📍 Phase 4</h3>
+              <h2>The Good Boy Empire 🍪</h2>
+              <ul>
+                <li>⭐ Major CEX Listings (Mexc, Binance, KuCoin, Bitmart.)</li>
+                <li>⭐ Good Boyverse Metaverse Development 🐶</li>
+                <li>⭐ Play-to-Earn Game Launch 🎮</li>
+                <li>⭐ Global Meme Domination!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+    <section id="faq" class="faq-section">
+      <div class="faq-container">
+        <h2>FAQ</h2>
+        <p>Got questions? We've got answers! Explore our FAQs to learn all about The Good Boy adventure: 🚀</p>
+        <div class="faq-content">
+          <div class="faq-list">
+            <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-label">1. What is The Good Boy?</button>
+          <div id="faq1" class="faq-answer" role="region" aria-labelledby="faq1-label" hidden>
+            <p>The Good Boy is a fun and community-driven meme coin on the blockchain, designed to bring humor and rewards to crypto enthusiasts.</p>
+          </div>
+            </div>
+            <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-label">2. Is The Good Boy safe to invest in?</button>
+          <div id="faq2" class="faq-answer" role="region" aria-labelledby="faq2-label" hidden>
+            <p>While no investment is without risk, The Good Boy is built with transparency and community trust at its core. Always do your own research before investing.</p>
+          </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-label">3. Is there a roadmap for future developments?</button>
+              <div id="faq3" class="faq-answer" role="region" aria-labelledby="faq3-label" hidden>
+                <p>Yes! Check out our roadmap section to see our exciting plans and milestones.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq4" id="faq4-label">4. How do I contact support?</button>
+              <div id="faq4" class="faq-answer" role="region" aria-labelledby="faq4-label" hidden>
+                <p>You can reach out to our support team via the contact section or through our social media channels.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq5" id="faq5-label">5. How can I join The Good Boy community?</button>
+          <div id="faq5" class="faq-answer" role="region" aria-labelledby="faq5-label" hidden>
+            <p>Join us on Discord, Telegram, and Twitter to be part of The Good Boy family and stay updated!</p>
+          </div>
+            </div>
+            <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq6" id="faq6-label">6. How do I buy The Good Boy token?</button>
+          <div id="faq6" class="faq-answer" role="region" aria-labelledby="faq6-label" hidden>
+            <p>Just click buy now and it will take you to the dex where you can buy it by swapping yor solana for The Good Boy Token.</p>
+          </div>
+            </div>
+          </div>
+          <div class="" aria-hidden="true" style="display: flex; justify-content: center; align-items: center;">
+            <img src="images/TGB3.png" alt="The Good Boy FAQ image" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+          </div>
+        </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <footer id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info">
+        <div class="contact-logo" style="display: flex; align-items: center;">
+          <div style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; background-color: #d9f71f; margin-right: 8px; border: 2px solid #d9f71f;">
+            <img src="images/Logotgb.png" alt="Logo TGB" style="width: 24px; height: 24px;" />
+          </div>
+          The Good Boy
+        </div>
+        <p>The value of cryptocurrencies may fluctuate. Profits may be subject to capital gains or other taxes applicable in your jurisdiction.</p>
+          <div class="social-icons" style="margin-top: 8px;">
+            <a href="#" aria-label="X" class="social-icon twitter" target="_blank" rel="noopener noreferrer">X</a>
+            <a href="#" aria-label="Instagram" class="social-icon instagram" target="_blank" rel="noopener noreferrer">📸</a>
+            <a href="#" aria-label="Telegram" class="social-icon telegram" target="_blank" rel="noopener noreferrer"><img src="images/telegram.png" alt="Telegram" style="width: 20px; height: 20px;" /></a>
+          </div>
+        </div>
+        <div class="quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">⭐ Home</a></li>
+            <li><a href="#about">⭐ About</a></li>
+            <li><a href="#roadmap">⭐ Roadmap</a></li>
+            <li><a href="#tokenomics">⭐ Tokenomics</a></li>
+            <li><a href="#how-to-buy">⭐ How to Buy</a></li>
+            <li><a href="#contact">⭐ Contact</a></li>
+          </ul>
+        </div>
+        <div class="contact-details">
+          <h3>Contact</h3>
+          <ul>
+<li><span class="icon">✉️</span> contact@thegoodboy.org</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© thegoodboy 2025. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of use</a>
+        </div>
+      </div>
+    </footer>
+<script>
+document.getElementById('copy-btn').addEventListener('click', function() {
+    const contractAddress = document.getElementById('contract-address').textContent;
+    navigator.clipboard.writeText(contractAddress).then(function() {
+        const btn = document.getElementById('copy-btn');
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(function() {
+            btn.textContent = originalText;
+        }, 2000);
+    }).catch(function(err) {
+        console.error('Failed to copy: ', err);
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+.roadmap-section {
+  background-color: #0f3d0f;
+  padding: 60px 20px;
+  color: #d9f71f;
+  font-family: 'Orbitron', sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #a6d22fbb;
+  position: relative;
+}
+
+.roadmap-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+}
+
+.roadmap-title {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 4rem;
+  font-weight: 900;
+  color: #d9f71f;
+  text-shadow:
+    0 0 10px #d9f71f,
+    0 0 20px #d9f71f;
+  user-select: none;
+  padding-top: 20px;
+  flex-shrink: 0;
+}
+
+.roadmap-timeline {
+  flex-grow: 1;
+  border-left: 3px solid #d9f71f;
+  padding-left: 30px;
+  position: relative;
+}
+
+.roadmap-phase {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.phase-marker {
+  position: absolute;
+  left: -12px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #d9f71f;
+  border-radius: 50%;
+  box-shadow:
+    0 0 10px #d9f71f,
+    0 0 20px #d9f71f;
+}
+
+.phase-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #d9f71f;
+}
+
+.phase-content h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow:
+    0 0 5px #d9f71f,
+    0 0 10px #d9f71f;
+}
+
+.phase-content ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  color: #e6f72f;
+}
+
+.phase-content ul li {
+  margin-bottom: 6px;
+}
+
+.phase-content ul li::before {
+  content: "⭐";
+  margin-right: 8px;
+  color: #d9f71f;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .roadmap-container {
+    flex-direction: column;
+  }
+  .roadmap-title {
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    font-size: 3rem;
+    padding-bottom: 20px;
+  }
+  .roadmap-timeline {
+    border-left: none;
+    border-top: 3px solid #d9f71f;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  .roadmap-phase {
+    margin-bottom: 30px;
+    padding-left: 0;
+  }
+  .phase-marker {
+    left: auto;
+    top: -12px;
+    right: 10px;
+  }
+}

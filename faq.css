@@ -1,0 +1,130 @@
+.faq-section {
+  background-color: #0f3d0f;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #0f3d0f,
+    #0f3d0f 10px,
+    #146214 10px,
+    #146214 20px
+  );
+  padding: 60px 20px;
+  color: #d9f71f;
+  font-family: 'Orbitron', sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #a6d22fbb;
+  position: relative;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-section h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #d9f71f;
+  text-shadow:
+    0 0 10px #d9f71f,
+    0 0 20px #d9f71f;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.faq-section p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #a6d22f;
+  text-shadow:
+    0 0 8px #a6d22f,
+    0 0 15px #a6d22f;
+}
+
+.faq-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.faq-list {
+  flex: 1;
+}
+
+.faq-item {
+  background-color: #1f3a0f;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px #a6d22f88;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #d9f71f;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 15px 20px;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  box-shadow: inset 0 -1px 0 #a6d22f88;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover,
+.faq-question[aria-expanded="true"] {
+  background-color: #a6d22f44;
+}
+
+.faq-question::after {
+  content: "▼";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"]::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 20px 15px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #e6f72f;
+  line-height: 1.4;
+}
+
+.faq-image {
+  flex: 1;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  filter: drop-shadow(0 0 10px #a6d22f);
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .faq-content {
+    flex-direction: column;
+  }
+  .faq-image {
+    height: 200px;
+    margin-top: 20px;
+  }
+}
