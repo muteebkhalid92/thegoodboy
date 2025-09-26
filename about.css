@@ -1,0 +1,61 @@
+/* About Section Specific Styles */
+.about-section {
+  text-align: center;
+}
+
+.about-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #d9f71f;
+}
+
+.logo-tgb-container {
+  margin: 0 auto 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-tgb-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-section > p {
+  font-family: sans-serif;
+  margin: 0 auto 15px;
+  font-size: 1em;
+  line-height: 1.4;
+  max-width: 600px; /* To keep text readable */
+}
+
+.about-list {
+  font-family: sans-serif;
+  list-style-position: inside;
+  padding-left: 0;
+  text-align: left;
+  margin: 0 auto 15px;
+  font-size: 1em;
+  line-height: 1.4;
+  max-width: 600px; /* To keep text readable */
+}
+
+.about-section .buy-memeco-btn {
+  padding: 8px 20px;
+  font-size: 0.9em;
+}
+
+.about-button-container {
+  text-align: center;
+  margin-top: 15px;
+}
